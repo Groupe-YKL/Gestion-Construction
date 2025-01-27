@@ -76,9 +76,8 @@
 
 ### Exécution du projet
     Pour exécuter le projet en local :
-    Lancez les conteneurs Docker :
-    docker-compose up
-    Utilisez un outil comme Postman ou curl pour tester les endpoints.
+    Lancez les conteneurs Docker : docker-compose up
+    Utilisez un outil comme Postman ou curl ou http://localhost:8000/docs. pour tester les endpoints.
 
 ### Tests
 Testez l'enregistrement d'un utilisateur via /register.
