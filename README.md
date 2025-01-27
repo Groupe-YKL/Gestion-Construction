@@ -36,16 +36,43 @@
     Permet de créer un nouvel utilisateur dans la base de données PostgreSQL.
     Méthode : POST
     URL : /register
+        Corps de la requête :
+            {
+            "username": "string",
+            "password": "string",
+            "email":"test@test.com
+            }
+        Réponse (succès) :
+            {
+            "message": "User created successfully"
+            }
+
 #### - Connexion (Login)
     Permet de générer un token JWT pour un utilisateur existant.
     Méthode : POST
     URL : /login    
+    Corps de la requête :
+        {
+        "username": "string",
+        "password": "string"
+        }
+    Réponse (succès) :
+        {
+        "access_token": "string",
+        "token_type": "bearer"
+        }
+
 #### - Route protégée
     Permet d'accéder à une ressource sécurisée après authentification via un token JWT.
     Méthode : GET
     URL : /protected_route
     En-tête :
         Authorization: Bearer <token>
+    Réponse (succès) :
+        {
+        "message": "Hello, <username>, you have access!"
+        }
+
 
 ### Exécution du projet
     Pour exécuter le projet en local :
